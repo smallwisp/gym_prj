@@ -31,6 +31,39 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 
 /***/ }),
 
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/clubSelect */ \"./src/modules/clubSelect.js\");\n/* harmony import */ var _modules_openModals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/openModals */ \"./src/modules/openModals.js\");\n\n\n\n\n(0,_modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_openModals__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://diplom_middle/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/modules/clubSelect.js":
+/*!***********************************!*\
+  !*** ./src/modules/clubSelect.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar selectClub = function selectClub() {\n  var clubSelect = document.querySelector('.club-select'),\n      clubsList = document.querySelector('.clubs-list');\n  clubSelect.addEventListener('click', function (event) {\n    event.target.classList.toggle('flag');\n\n    if (event.target.classList.contains('flag')) {\n      event.target.nextElementSibling.style.display = 'block';\n    } else {\n      event.target.nextElementSibling.style.display = 'none';\n    }\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (selectClub);\n\n//# sourceURL=webpack://diplom_middle/./src/modules/clubSelect.js?");
+
+/***/ }),
+
+/***/ "./src/modules/openModals.js":
+/*!***********************************!*\
+  !*** ./src/modules/openModals.js ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar openModals = function openModals() {\n  var right = document.querySelector('.right'),\n      visitForm = document.querySelector('#free_visit_form'),\n      callbackForm = document.querySelector('#callback_form'),\n      fixedGift = document.querySelector('.fixed-gift'),\n      giftForm = document.querySelector('#gift');\n\n  function closeModal(form) {\n    form.addEventListener('click', function (event) {\n      var target = event.target;\n\n      if (target.classList.contains('overlay') || target.classList.contains('close_icon')) {\n        form.style.display = 'none';\n      }\n    });\n  }\n\n  right.addEventListener('click', function (event) {\n    var target = event.target;\n    console.log(target);\n\n    if (target.classList.contains('open-popup')) {\n      visitForm.style.display = 'block';\n    }\n\n    ;\n\n    if (target.classList.contains('btn')) {\n      callbackForm.style.display = 'block';\n    }\n\n    closeModal(visitForm);\n    closeModal(callbackForm);\n  });\n  fixedGift.addEventListener('click', function (event) {\n    fixedGift.style.display = 'none';\n    giftForm.style.display = 'block';\n    closeModal(giftForm);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (openModals);\n\n//# sourceURL=webpack://diplom_middle/./src/modules/openModals.js?");
+
+/***/ }),
+
 /***/ "./node_modules/events/events.js":
 /*!***************************************!*\
   !*** ./node_modules/events/events.js ***!
@@ -401,6 +434,18 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	__webpack_require__.i = [];
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/get javascript update chunk filename */
 /******/ 	(() => {
 /******/ 		// This function allow to reference all chunks
@@ -417,7 +462,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("900adda7b45ad57c3da4")
+/******/ 		__webpack_require__.h = () => ("d9c1bb629a601d49d722")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
@@ -480,6 +525,17 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 			script.onerror = onScriptComplete.bind(null, script.onerror);
 /******/ 			script.onload = onScriptComplete.bind(null, script.onload);
 /******/ 			needAttach && document.head.appendChild(script);
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -1409,6 +1465,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
+/******/ 	__webpack_require__("./src/index.js");
 /******/ 	__webpack_require__("./node_modules/webpack-dev-server/client/index.js?http://localhost:8080");
 /******/ 	var __webpack_exports__ = __webpack_require__("./node_modules/webpack/hot/dev-server.js");
 /******/ 	
