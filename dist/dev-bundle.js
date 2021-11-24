@@ -38,7 +38,7 @@ eval("\nmodule.exports = function () {\n\treturn /[\\u001b\\u009b][[()#;?]*(?:[0
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/clubSelect */ \"./src/modules/clubSelect.js\");\n/* harmony import */ var _modules_openModals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/openModals */ \"./src/modules/openModals.js\");\n\n\n\n\n(0,_modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_openModals__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n\n//# sourceURL=webpack://diplom_middle/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/clubSelect */ \"./src/modules/clubSelect.js\");\n/* harmony import */ var _modules_openModals__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/openModals */ \"./src/modules/openModals.js\");\n/* harmony import */ var _modules_topSlider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/topSlider */ \"./src/modules/topSlider.js\");\n\n\n\n\n\n(0,_modules_clubSelect__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n(0,_modules_openModals__WEBPACK_IMPORTED_MODULE_1__[\"default\"])();\n(0,_modules_topSlider__WEBPACK_IMPORTED_MODULE_2__[\"default\"])();\n\n//# sourceURL=webpack://diplom_middle/./src/index.js?");
 
 /***/ }),
 
@@ -61,6 +61,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar openModals = function openModals() {\n  var right = document.querySelector('.right'),\n      visitForm = document.querySelector('#free_visit_form'),\n      callbackForm = document.querySelector('#callback_form'),\n      fixedGift = document.querySelector('.fixed-gift'),\n      giftForm = document.querySelector('#gift');\n\n  function closeModal(form) {\n    form.addEventListener('click', function (event) {\n      var target = event.target;\n\n      if (target.classList.contains('overlay') || target.classList.contains('close_icon')) {\n        form.style.display = 'none';\n      }\n    });\n  }\n\n  right.addEventListener('click', function (event) {\n    var target = event.target;\n    console.log(target);\n\n    if (target.classList.contains('open-popup')) {\n      visitForm.style.display = 'block';\n    }\n\n    ;\n\n    if (target.classList.contains('btn')) {\n      callbackForm.style.display = 'block';\n    }\n\n    closeModal(visitForm);\n    closeModal(callbackForm);\n  });\n  fixedGift.addEventListener('click', function (event) {\n    fixedGift.style.display = 'none';\n    giftForm.style.display = 'block';\n    closeModal(giftForm);\n  });\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (openModals);\n\n//# sourceURL=webpack://diplom_middle/./src/modules/openModals.js?");
+
+/***/ }),
+
+/***/ "./src/modules/topSlider.js":
+/*!**********************************!*\
+  !*** ./src/modules/topSlider.js ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nvar topSlider = function topSlider() {\n  var mainSlider = document.querySelector('.main-slider'),\n      slides = mainSlider.querySelectorAll('.slide');\n  console.log(slides);\n  var currentSlide = 0;\n\n  var prevSlide = function prevSlide(item, currentSlide) {\n    item[currentSlide].style.display = 'none';\n  };\n\n  var nextSlide = function nextSlide(item, currentSlide) {\n    item[currentSlide].style.display = '';\n  };\n\n  var autoPlaySilde = function autoPlaySilde() {\n    prevSlide(slides, currentSlide);\n    currentSlide++;\n\n    if (currentSlide >= slides.length) {\n      currentSlide = 0;\n    }\n\n    ;\n    nextSlide(slides, currentSlide);\n  };\n\n  var startSlide = function startSlide() {\n    var time = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3000;\n    interval = setInterval(autoPlaySilde, time);\n  };\n\n  startSlide();\n};\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (topSlider);\n\n//# sourceURL=webpack://diplom_middle/./src/modules/topSlider.js?");
 
 /***/ }),
 
@@ -462,7 +473,7 @@ eval("var map = {\n\t\"./log\": \"./node_modules/webpack/hot/log.js\"\n};\n\n\nf
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("d9c1bb629a601d49d722")
+/******/ 		__webpack_require__.h = () => ("811931905ec9d3e48f78")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */
