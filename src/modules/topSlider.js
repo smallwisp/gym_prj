@@ -23,7 +23,7 @@ const topSlider = function() {
   }
 
   const startSlide = (time = 3000) => {
-    interval = setInterval(autoPlaySilde, time)
+    let interval = setInterval(autoPlaySilde, time)
   };
 
   startSlide();

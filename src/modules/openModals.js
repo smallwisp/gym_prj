@@ -8,7 +8,7 @@ const openModals = function() {
   function closeModal(form) {
     form.addEventListener('click', (event) => {
       let target = event.target;
-      if (target.classList.contains('overlay') || target.classList.contains('close_icon')) {
+      if (target.classList.contains('overlay') || target.classList.contains('close_icon') || target.classList.contains('close-btn')) {
         form.style.display = 'none';
       }
     })
