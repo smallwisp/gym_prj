@@ -16,7 +16,6 @@ const openModals = function() {
   
   right.addEventListener('click', (event) => {
     let target = event.target;
-    console.log(target);
     if (target.classList.contains('open-popup')) {
       visitForm.style.display = 'block';
     };

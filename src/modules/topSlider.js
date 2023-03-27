@@ -1,7 +1,6 @@
 const topSlider = function() {
   const mainSlider = document.querySelector('.main-slider'),
         slides = mainSlider.querySelectorAll('.slide');
-  console.log(slides);
 
   let currentSlide = 0;
 
