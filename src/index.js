@@ -10,4 +10,6 @@ selectClub();
 openModals();
 topSlider();
 checkAllInputs();
-sendForms();
+sendForms('banner-form');
+sendForms('form1');
+sendForms('card_order');

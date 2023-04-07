@@ -1,4 +1,4 @@
-function maskPhone(selector, masked = '0.00000') {
+function maskPhone(selector, masked = '+7 (___) ___-__-__') {
 	const elems = document.querySelectorAll(selector);
 	// +7 (___) ___-__-__'
 	function mask(event) {

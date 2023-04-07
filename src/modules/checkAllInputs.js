@@ -14,15 +14,15 @@ const checkAllInputs = () => {
   const inputsAll = document.querySelectorAll('input');
 
   inputsAll.forEach((item) => {
+    item.value = '';
     item.addEventListener('input', (event) => {
       if (event.target.name === 'name') {
-        console.log(event.target);
         const nameValue = event.target.value;
         event.target.value = nameValue.replace(/[;\+\>\<\*\!\=\.@:\?\,#\$\%^\&\}{\[\]\^\"\\\|\/\_)(\w]/gi, '');
-      } /* else if (event.target.name === 'phone') {
+      } else if (event.target.name === 'phone') {
         console.log(event.target.tagName);
         maskPhone(event.target.tagName.toLowerCase());
-      } */
+      } 
     })
 
     item.addEventListener('blur', event => {
