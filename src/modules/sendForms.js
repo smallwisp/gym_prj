@@ -1,49 +1,4 @@
 const sendForms = (id) => {
-/*   const forms = document.querySelectorAll('form');
-  const statusMessage = document.createElement('div');
-  statusMessage.style.cssText = 'font-size: 2rem;';
-
-  const errorMessage = 'Возникла ошибка!',
-        successMessage = 'Форма отправлена! Скоро с вами свяжутся.';
-
-  async function postDataPromise(body) {
-    let request = fetch('../../server.php', {
-      method: 'POST',
-      headers: {
-        'Content-type': 'application/json',
-      },
-      body: JSON.stringify(body),
-    });
-
-    let response = await request;
-
-    if (response.status !== 200) {
-      throw new Error('Requets error!');
-    }
-
-    statusMessage.textContent = successMessage;
-  };
-
-  forms.forEach(item => {
-    item.addEventListener('submit', (event) => {
-      event.preventDefault();
-      item.append(statusMessage);
-      const formData = new FormData(item);
-      let body = {}; 
-
-      formData.forEach((val, key) => {
-        body[key] = val;
-      })
-
-      postDataPromise(body)
-        .catch(error => {
-          statusMessage.textContent = errorMessage;
-          console.log(error);
-        })
-      console.log(body);
-    })
-  }) */
-
   const errorMessage = 'Возникла ошибка!',
         successMessage = 'Форма отправлена! Скоро с вами свяжутся.';
   
